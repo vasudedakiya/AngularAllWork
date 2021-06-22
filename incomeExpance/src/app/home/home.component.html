@@ -1,0 +1,72 @@
+<div>
+    <table class="table" style="background-color:cornflowerblue; ">
+        <tr style="height: 50px; ">
+            <td class="col-md-2" style="padding-left: 50px;">
+                <input type="date" [(ngModel)]="Date" style="background-color: white; width:200px;" class="form-control"
+                    name="" id="">
+
+            </td>
+            <td class="col-md-2">
+                <input type="number" [(ngModel)]="Money" style="background-color: white; width:200px;"
+                    class="form-control" name="" placeholder="Money" (keypress)="buttonOn()" id="">
+            </td>
+            <td class="col-md-2">
+                <input type="text" [(ngModel)]="Disc" style="background-color: white; width:200px;" class="form-control"
+                    placeholder="Discription">
+            </td>
+            <td class="col-md-2">
+                <input type="radio" name="abc" id="" value="in" [checked]="IorE=='in'"
+                    (change)="selected($event)">income
+                <input type="radio" name="abc" id="" value="ex" [checked]="IorE=='ex'"
+                    (change)="selected($event)">expance
+            </td>
+
+            <td class=" col-md-2">
+                <input type="button" *ngIf="isEdit !==true" (click)="addData()"
+                    class="btn btn-primary bg-success form-control" style="width:100px;" value="add"
+                    [disabled]="isDisabled">
+
+                <input type="button" *ngIf="isEdit === true" (click)="EditData()"
+                    class="btn btn-primary bg-success form-control" style="width:100px;" value="Edit">
+            </td>
+        </tr>
+    </table>
+
+    <table style="background-color:darkgrey; width: 100%;">
+        <tr style="height: 30px;">
+            <td style="padding-left: 50px;" class="col-md-2">Date</td>
+
+            <td class="col-md-2">Discription</td>
+
+            <td class="col-md-2">
+                <span style="color: green;">Income</span>/
+                <span style="color: red;">Expance</span>
+            </td>
+
+
+            <td class=" col-md-1">Edit</td>
+            <td class="col-md-1">Delete</td>
+
+        </tr>
+    </table>
+
+
+    <table class="table" style="background-color:deepskyblue; ">
+        <tr style="height: 50px;" *ngFor="let data of list; let i = index">
+            <td style="padding-left: 50px;" class="col-md-2">{{ data.date }}</td>
+
+            <td class="col-md-2">{{data.disc}}</td>
+
+            <td class="col-md-2" *ngIf="data.IorE === 'in' " style="color: green;">
+                {{data.money}}
+            </td>
+            <td class="col-md-2" *ngIf="data.IorE === 'ex' " style="color: red;">
+                {{data.money}}
+            </td>
+
+            <td class=" col-md-1"><input type="button" (click)="Selected(i)" class="btn bg-warning" value="Edit"></td>
+            <td class="col-md-1"><input type="button" (click)="DeleteEntey(i)" class="btn bg-danger" value="Delete">
+            </td>
+        </tr>
+    </table>
+</div>

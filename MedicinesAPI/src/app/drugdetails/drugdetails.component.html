@@ -1,0 +1,22 @@
+<div style="margin-left: 35%; margin-top: 3%;">
+
+    <div class="card" style="width: 24rem;">
+        <div class="card-body">
+            <h2 class="card-title mb-3">{{drugDetail.DrugName}}</h2>
+            <h5 class="card-text">Version : {{drugDetail.Version}}</h5>
+            <p class="card-text">PoisoningAccidental : {{drugDetail.PoisoningAccidental}}</p>
+            <p class="card-text">PoisoningIntentional : {{drugDetail.PoisoningIntentional}}</p>
+            <p class="card-text">PoisoningAssault : {{drugDetail.PoisoningAssault}}</p>
+            <p class="card-text">PoisoningUndetermined : {{drugDetail.PoisoningUndetermined}}</p>
+            <p class="card-text">Adverseeffect : {{drugDetail.Adverseeffect}}</p>
+            <p class="card-text">Underdosing : {{drugDetail.Underdosing}}</p>
+            <p class="card-text">DrugLevel : {{drugDetail.DrugLevel}}</p>
+            <div style="margin-left: 20%;">
+                <input type="button" (click)="deleteDrug()" class="btn btn-danger" value="Delete">
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                <input type="button" class="btn btn-warning" (click)="editDrug()" value="Edit">
+            </div>
+        </div>
+    </div>
+
+</div>

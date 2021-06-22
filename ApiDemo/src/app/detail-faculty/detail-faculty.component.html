@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-3">
+        <img src="{{facultyDetail.FacultyImage}}" class="img-fluid" alt="" />
+        <p>{{facultyDetail.FacultyName}}</p>
+        <p>{{facultyDetail.FacultySubjectsTaught}}</p>
+    </div>
+
+    <div class="col-md-9">
+        <p>{{facultyDetail.FacultyProfileDescription}}</p>
+
+        <input type="button" value="Delete" class="btn btn-danger mr-3"
+            (click)="deleteFaculty(facultyDetail.FacultyID)">
+
+        <input type="button" value="Edit" class="btn btn-warning" (click)="editFaculty()">
+    </div>
+
+</div>

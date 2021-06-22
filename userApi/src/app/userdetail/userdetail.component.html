@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col-md-4" style="padding-left: 5%;">
+        <img src="{{usersDetail.ProfilePicturePath}}" class="img-fluid" alt="" />
+        <h4>{{usersDetail.FirstName}} {{usersDetail.MiddleName}} {{usersDetail.LastName}}</h4>
+        <p>{{usersDetail.UserName}}</p>
+
+        <input type="button" (click)="deleteuser()" style="margin: 10%;" value="Delete" class="btn btn-danger mr-3">
+
+        <input type="button" (click)="edituser()" value="Edit" class="btn btn-warning">
+    </div>
+
+    <div class="col-md-4">
+        <ul class="list-group">
+            <li class="list-group-item">Gender
+                <span style="float: right; margin-right: 10%;">{{usersDetail.Gender}}</span>
+            </li>
+            <li class="list-group-item">DOB
+                <span style="float: right; margin-right: 10%;">{{usersDetail.DOB}}</span>
+            </li>
+            <li class="list-group-item">Height
+                <span style="float: right; margin-right: 10%;">{{usersDetail.Height}}</span>
+            </li>
+            <li class="list-group-item">Weight
+                <span style="float: right; margin-right: 10%;">{{usersDetail.Weight}}</span>
+            </li>
+            <li class="list-group-item">HeightestEducationQualification
+                <span style="float: right; margin-right: 10%;">{{usersDetail.HeightestEducationQualification}}</span>
+            </li>
+            <li class="list-group-item">AboutUser
+                <span style="float: right; margin-right: 10%;">{{usersDetail.AboutUser}}</span>
+            </li>
+            <li class="list-group-item">Hobbies
+                <span style="float: right; margin-right: 10%;">{{usersDetail.Hobbies}}</span>
+            </li>
+            <li class="list-group-item">CurrentJobTitle
+                <span style="float: right; margin-right: 10%;">{{usersDetail.CurrentJobTitle}}</span>
+            </li>
+            <li class="list-group-item">CurrentSalary
+                <span style="float: right; margin-right: 10%;">{{usersDetail.CurrentSalary}}</span>
+            </li>
+            <li class="list-group-item">TotalExperience
+                <span style="float: right; margin-right: 10%;">{{usersDetail.TotalExperience}}</span>
+            </li>
+            <li class="list-group-item">MobileNumber
+                <span style="float: right; margin-right: 10%;">{{usersDetail.MobileNumber}}</span>
+            </li>
+            <li class="list-group-item">EmailAddress
+                <span style="float: right; margin-right: 10%;">{{usersDetail.EmailAddress}}</span>
+            </li>
+
+        </ul>
+
+
+
+    </div>
+
+    <div class="col-md-4">
+
+        <ul class="list-group">
+
+            <li class="list-group-item">ResidentialAddress
+                <span style="float: right; margin-right: 10%;">{{usersDetail.ResidentialAddress}}</span>
+            </li>
+            <li class="list-group-item">CityID
+                <span style="float: right; margin-right: 10%;">{{usersDetail.CityID}}</span>
+            </li>
+            <li class="list-group-item">CasteID
+                <span style="float: right; margin-right: 10%;">{{usersDetail.CasteID}}</span>
+            </li>
+            <li class="list-group-item">IsWidow
+                <span style="float: right; margin-right: 10%;">{{usersDetail.IsWidow}}</span>
+            </li>
+            <li class="list-group-item">WidowDate
+                <span style="float: right; margin-right: 10%;">{{usersDetail.WidowDate}}</span>
+            </li>
+            <li class="list-group-item">IsDivorced
+                <span style="float: right; margin-right: 10%;">{{usersDetail.IsDivorced}}</span>
+            </li>
+            <li class="list-group-item">DivorceDate
+                <span style="float: right; margin-right: 10%;">{{usersDetail.DivorceDate}}</span>
+            </li>
+            <li class="list-group-item">IsHandiCapped
+                <span style="float: right; margin-right: 10%;">{{usersDetail.IsHandiCapped}}</span>
+            </li>
+            <li class="list-group-item">HandiCappDetail
+                <span style="float: right; margin-right: 10%;">{{usersDetail.HandiCappDetail}}</span>
+            </li>
+            <li class="list-group-item">Expectations
+                <span style="float: right; margin-right: 10%;">{{usersDetail.Expectations}}</span>
+            </li>
+            <li class="list-group-item">Created
+                <span style="float: right; margin-right: 10%;">{{usersDetail.Created}}</span>
+            </li>
+            <li class="list-group-item">Modified
+                <span style="float: right; margin-right: 10%;">{{usersDetail.Modified}}</span>
+            </li>
+
+        </ul>
+    </div>
+
+</div>

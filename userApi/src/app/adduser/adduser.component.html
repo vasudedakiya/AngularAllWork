@@ -1,0 +1,163 @@
+<div class="container">
+
+    <form (ngSubmit)="userAdd()">
+
+        <!-- Form Name -->
+        <legend *ngIf="id===0">Add Faculty</legend>
+        <legend *ngIf="id!==0">Edit Faculty</legend>
+
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter UserName:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.UserName" name="UserName" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Password:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Password" name="Password" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FirstName:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.FirstName" name="FirstName"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter MiddleName:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.MiddleName" name="MiddleName"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter LastName:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.LastName" name="LastName" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter ProfilePicturePath:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.ProfilePicturePath"
+                name="ProfilePicturePath" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Gender:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Gender" name="Gender" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter DOB:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.DOB" name="DOB" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Height:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Height" name="Height" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Weight:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Weight" name="Weight" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter HeightestEducationQualification:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.HeightestEducationQualification"
+                name="HeightestEducationQualification" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter AboutUser:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.AboutUser" name="AboutUser"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Hobbies:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Hobbies" name="Hobbies" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter CurrentJobTitle:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.CurrentJobTitle" name="CurrentJobTitle"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter CurrentSalary:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.CurrentSalary" name="CurrentSalary"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter TotalExperience:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.TotalExperience" name="TotalExperience"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter MobileNumber:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.MobileNumber" name="MobileNumber"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter EmailAddress:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.EmailAddress" name="EmailAddress"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter ResidentialAddress:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.ResidentialAddress"
+                name="ResidentialAddress" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter CityID:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.CityID" name="CityID" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter CasteID:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.CasteID" name="CasteID" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter IsWidow:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.IsWidow" name="IsWidow" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter WidowDate:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.WidowDate" name="WidowDate"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter IsDivorced:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.IsDivorced" name="IsDivorced"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter DivorceDate:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.DivorceDate" name="DivorceDate"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter IsHandiCapped:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.IsHandiCapped" name="IsHandiCapped"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter HandiCappDetail:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.HandiCappDetail" name="HandiCappDetail"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Expectations:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Expectations" name="Expectations"
+                class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Created:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Created" name="Created" class="col-md-6">
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter Modified:</label>
+            <input type="text" class="form-control" [(ngModel)]="userDetail.Modified" name="Modified" class="col-md-6">
+        </div>
+
+
+
+        <!-- Button (Double) -->
+        <div class="form-group row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button id="button1id" *ngIf="id===0" name="button1id" class="btn btn-success">Add Faculty</button>
+                <button id="button1id" *ngIf="id!==0" name="button1id" class="btn btn-success">Edit Faculty</button>
+
+                <a id="button2id" name="button2id" class="btn btn-danger">Back</a>
+            </div>
+        </div>
+
+    </form>
+</div>

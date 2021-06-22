@@ -1,0 +1,9 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1" routerLink="./" style="padding-left: 30px;">Drugs.com</a>
+
+        <a routerLink="./login" *ngIf="isLogin === false" class="btn btn-primary"> login</a>
+        <input type="button" *ngIf="isLogin === true" class="btn btn-danger" (click)="Logout()" value="Logout">
+    </div>
+
+</nav>

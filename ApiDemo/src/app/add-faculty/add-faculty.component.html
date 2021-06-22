@@ -1,0 +1,143 @@
+<div class="container">
+
+    <form #FacultyForm="ngForm" (ngSubmit)="insertFaculty()">
+
+
+        <!-- Form Name -->
+        <legend *ngIf="id===0">Add Faculty</legend>
+        <legend *ngIf="id!==0">Edit Faculty</legend>
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyName:</label>
+
+            <input type="text" class="form-control" name="FacultyName" [(ngModel)]="facultyDetail.FacultyName"
+                class="col-md-6" #FacultyName=ngModel required />
+
+            <span *ngIf="FacultyName.invalid && FacultyName.touched" style="color: red;">invalid</span>
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyDesignation:</label>
+            <input type="text" class="form-control" name="FacultyDesignation"
+                [(ngModel)]="facultyDetail.FacultyDesignation" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyHighestEducation:</label>
+            <input type="text" class="form-control" name="FacultyHighestEducation"
+                [(ngModel)]="facultyDetail.FacultyHighestEducation" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyExperienceInYears:</label>
+            <input type="number" class="form-control" name="FacultyExperienceInYears"
+                [(ngModel)]="facultyDetail.FacultyExperienceInYears" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyWorkingSince:</label>
+            <input type="text" class="form-control" name="FacultyWorkingSince"
+                [(ngModel)]="facultyDetail.FacultyWorkingSince" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyMobileNumber:</label>
+            <input type="text" class="form-control" name="FacultyMobileNumber"
+                [(ngModel)]="facultyDetail.FacultyMobileNumber" pattern="^[0-9]{10}$" #FacultyMobileNumber=ngModel
+                required class="col-md-6">
+            <span *ngIf="FacultyMobileNumber.invalid && FacultyMobileNumber.touched" style="color: red;">invalid</span>
+
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyEmailAddress:</label>
+            <input type="text" class="form-control" name="FacultyEmailAddress"
+                [(ngModel)]="facultyDetail.FacultyEmailAddress" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultySeating:</label>
+            <input type="text" class="form-control" name="FacultySeating" [(ngModel)]="facultyDetail.FacultySeating"
+                class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyProfileDescription:</label>
+            <input type="text" class="form-control" name="FacultyProfileDescription"
+                [(ngModel)]="facultyDetail.FacultyProfileDescription" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyAreaSpecialization:</label>
+            <input type="text" class="form-control" name="FacultyAreaSpecialization"
+                [(ngModel)]="facultyDetail.FacultyAreaSpecialization" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultySubjectsTaught:</label>
+            <input type="text" class="form-control" name="FacultySubjectsTaught"
+                [(ngModel)]="facultyDetail.FacultySubjectsTaught" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyImage:</label>
+            <input type="text" class="form-control" name="FacultyImage" [(ngModel)]="facultyDetail.FacultyImage"
+                class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultyDepartmentID:</label>
+            <input type="text" class="form-control" name="FacultyDepartmentID"
+                [(ngModel)]="facultyDetail.FacultyDepartmentID" class="col-md-6">
+
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group row">
+            <label for="email" class="col-md-3">Enter FacultySequence:</label>
+            <input type="text" class="form-control" name="FacultySequence" [(ngModel)]="facultyDetail.FacultySequence"
+                class="col-md-6">
+
+        </div>
+
+        <!-- Button (Double) -->
+        <div class="form-group row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <button id="button1id" [disabled]="FacultyForm.invalid" *ngIf="id===0" name="button1id"
+                    class="btn btn-success">Add Faculty</button>
+
+                <button id="button1id" *ngIf="id!==0" name="button1id" class="btn btn-success">Edit Faculty</button>
+
+                <a id="button2id" name="button2id" class="btn btn-danger">Back</a>
+
+            </div>
+        </div>
+
+    </form>
+</div>

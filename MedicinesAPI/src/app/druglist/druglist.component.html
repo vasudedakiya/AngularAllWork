@@ -1,0 +1,13 @@
+<div class="mt-4" style="margin-left: 22%; margin-right: 22%;">
+
+        <ul class="list-group mb-2">
+                <li class="list-group-item border border-dark"><b>Drug Name</b> <b style="margin-left: 65%;">View
+                                More</b></li>
+        </ul>
+        <ul class="list-group" *ngFor="let d of drug">
+                <li class="list-group-item border-secondary">{{d.DrugName}}
+                        <input type="button" class="btn btn-warning" (click)="drugDetail(d.DrugsMasterID)"
+                                style="float: right; margin-right: 11%;" value="View">
+                </li>
+        </ul>
+</div>

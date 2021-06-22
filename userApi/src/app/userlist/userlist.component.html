@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-3" *ngFor="let us of users">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{us.ProfilePicturePath}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{us.FirstName}} {{us.MiddleName}} {{us.LastName}}</h5>
+                <p class="card-text">{{us.MobileNumber}}</p>
+                <a (click)="viewMore(us.UserID)" class="btn btn-primary">view more</a>
+            </div>
+        </div>
+    </div>
+</div>
