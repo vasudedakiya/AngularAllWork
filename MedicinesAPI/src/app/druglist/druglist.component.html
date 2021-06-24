@@ -5,9 +5,10 @@
                                 More</b></li>
         </ul>
         <ul class="list-group" *ngFor="let d of drug">
-                <li class="list-group-item border-secondary">{{d.DrugName}}
+                <li class="list-group-item ">{{d.DrugName}}
                         <input type="button" class="btn btn-warning" (click)="drugDetail(d.DrugsMasterID)"
                                 style="float: right; margin-right: 11%;" value="View">
                 </li>
+                <hr>
         </ul>
 </div>

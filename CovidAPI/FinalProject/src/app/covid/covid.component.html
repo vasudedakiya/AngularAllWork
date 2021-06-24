@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Country name</th>
+            <th scope="col">Confirmed case</th>
+            <th scope="col">Recovered case</th>
+            <th scope="col">Deaths</th>
+            <th scope="col">Capital_city</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let f of covid">
+            <th scope="row">{{f.country}}</th>
+            <th>{{f.confirmed}}</th>
+            <th>{{f.recovered}}</th>
+            <th>{{f.deaths}}</th>
+            <th>{{f.sq_km_area}}</th>
+          </tr>
+        </tbody>
+      </table>
+</div>

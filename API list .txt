@@ -5,3 +5,17 @@ https://arjunbala.com/DFaculty/api.php/records/faculty
 http://arjunbala.com/DFaculty/api.php/records/user
 
 http://arjunbala.com/DFaculty/api.php/records/medicines
+
+
+---------------------------------------------------------
+finnhub API key : c3904paad3ido5akbae0
+
+documentations & API:- https://finnhub.io/docs/api/introduction
+
+---------------------------------------------------------
+
+Google Mape API key :- AIzaSyAylSDuwiK2caXXHgUuQZs0l0DKN2Yfpsk
+
+API :- https://maps.googleapis.com/maps/api/js?key=AIzaSyAylSDuwiK2caXXHgUuQZs0l0DKN2Yfpsk&callback=initMap&libraries=&v=weekly
+
+---------------------------------------------------------
