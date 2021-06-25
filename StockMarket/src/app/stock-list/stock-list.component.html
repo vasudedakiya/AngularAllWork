@@ -1,4 +1,5 @@
 <div style="margin-top: 5%;">
+
     <table class="table table-striped table-responsive-md btn-table">
 
         <thead>
@@ -12,6 +13,7 @@
         </thead>
 
         <tbody>
+
             <tr *ngFor="let li of list">
                 <th scope="row" style="padding-left: 50px;">{{li.symbol}}</th>
                 <td>{{li.description}}</td>
@@ -21,6 +23,13 @@
                     <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
                         (click)="showDetail(li.symbol )">View</button>
                 </td>
+            </tr>
+            <tr class="h6">
+                <td> </td>
+                <td> </td>
+                <td>Loding data... <br> please wait... it take some time....</td>
+                <td> </td>
+                <td> </td>
             </tr>
 
         </tbody>
