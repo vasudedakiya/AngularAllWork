@@ -1,23 +1,20 @@
 <div class="body">
     <div class="container py-3" style="margin-top: 3%;">
 
-        <div class="card">
+        <div class="card" *ngFor="let n of news">
             <div class="row ">
 
                 <div class="col-md-7 px-3">
                     <div class="card-block px-6">
-                        <h4 class="card-title">Horizontal Card with Carousel - Bootstrap 4 </h4>
+                        <h4 class="card-title">{{n.headline}}</h4>
+                        <p>Date : {{n.datetime | date:'MMM d, 2021, h:mm a'}}</p>
                         <p class="card-text">
-                            The Carousel code can be replaced with an img src, no problem. The added CSS brings shadow
-                            to
-                            the card and some adjustments to the prev/next buttons and the indicators is rounded now. As
-                            in
-                            Bootstrap 3
+                            {{n.summary}}
                         </p>
-                        <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the
-                            carousel div above the col containing the text for left alignment of images</p>
-                        <br>
-                        <a href="#" class="mt-auto btn btn-primary  ">Read More</a>
+                        <p>Company : {{n.related}}</p>
+                        <p>Source : {{n.source}}</p>
+
+                        <a href="{{n.url}}" class="mt-auto btn btn-primary  ">Read More</a>
                     </div>
                 </div>
                 <!-- Carousel start -->
@@ -25,7 +22,7 @@
                     <div id="CarouselTest" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block" src="https://picsum.photos/450/300?image=1072" alt="">
+                                <img class="d-block img-fluid" src="{{n.image}}" alt="">
                             </div>
 
                         </div>
@@ -37,4 +34,13 @@
         <!-- End of card -->
 
     </div>
+</div>
+
+<div>
+    <h3 *ngIf="noNews===true" style=" margin-left: 330px; margin-top: 50px; font-family: Bahnschrift;">
+        Ohh!! sorry we have no news for this stock <br> <br>
+        <a routerLink="../../../stocks" class="btn btn-outline-primary" style="margin-left: 250px;">back</a>
+    </h3>
+
+
 </div>

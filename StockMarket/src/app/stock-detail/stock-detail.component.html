@@ -4,11 +4,15 @@
     Stock Detail
 </div>
 
+<div *ngIf="isDetail ===0" style=" margin-left: 80px; color: red; font-family: Bahnschrift;" class="h6">
+    Ohh!! We are unable to provide full data of this stock <br> We have only those data you can see
+</div>
+
 <div class="row">
 
 
 
-    <div class="col-md-5 " style="font-family: Bahnschrift;">
+    <div class="col-md-5 " style="font-family: Bahnschrift;" *ngIf="isDetail !==0">
         <ul class=" list-group-flush">
             <li class="list-group-item"> </li>
 
@@ -48,14 +52,14 @@
             <li class="list-group-item"> </li>
 
 
-            <li class="list-group-item"> <b>Market Cap</b>
+            <li class="list-group-item" *ngIf="isDetail !==0"> <b>Market Cap</b>
                 <span style="float: right; margin-right: 11%;">{{stockDetail.marketCapitalization}}</span>
             </li>
-            <li class="list-group-item"> <b>Share Outstand</b>
+            <li class="list-group-item" *ngIf="isDetail !==0"> <b>Share Outstand</b>
                 <span style="float: right; margin-right: 11%;">{{stockDetail.shareOutstanding}}</span>
             </li>
             <li class="list-group-item"> <b>Current Time</b>
-                <span style="float: right; margin-right: 11%;">{{stockValue.t}}</span>
+                <span style="float: right; margin-right: 11%;">{{stockValue.t | date:'shortTime'}}</span>
             </li>
             <li class="list-group-item"> <b>Current Price</b>
                 <span style="float: right; margin-right: 11%;">{{stockValue.c}}</span>

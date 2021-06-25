@@ -1,1 +1,42 @@
-<p>genral-news works!</p>
+<div class="body">
+    <div class="container py-3" style="margin-top: 3%;">
+
+        <div class="card" *ngFor="let n of news">
+            <div class="row ">
+
+                <div class="col-md-7 px-3">
+                    <div class="card-block px-6">
+                        <h4 class="card-title">{{n.headline}}</h4>
+                        <p>Date : {{n.datetime | date:'MMM d, 2021, h:mm a'}}</p>
+                        <p class="card-text">
+                            {{n.summary}}
+                        </p>
+                        <p>Company : {{n.related}}</p>
+                        <p>Source : {{n.source}}</p>
+
+                        <a href="{{n.url}}" class="mt-auto btn btn-primary  ">Read More</a>
+                    </div>
+                </div>
+                <!-- Carousel start -->
+                <div class="col-md-5">
+                    <div id="CarouselTest" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block img-fluid" src="{{n.image}}" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End of carousel -->
+            </div>
+        </div>
+        <!-- End of card -->
+
+    </div>
+</div>
+
+<div>
+    <h3 *ngIf="noNews===true" style=" margin-left: 330px; margin-top: 50px; font-family: Bahnschrift;">
+        Ohh!! sorry we have no news for this stock</h3>
+</div>

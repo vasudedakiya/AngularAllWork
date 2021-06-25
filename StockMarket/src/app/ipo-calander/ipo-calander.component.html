@@ -1,1 +1,26 @@
-<p>ipo-calander works!</p>
+<div style="margin-top: 5%;">
+    <table class="table table-striped table-responsive-md btn-table">
+
+        <thead>
+            <tr>
+                <th style="padding-left: 50px;">Symbol</th>
+                <th>Name</th>
+                <th>Date</th>
+                <th>No Of Shares</th>
+                <th>price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let li of ipos">
+                <th style="padding-left: 50px;">{{li.symbol}}</th>
+                <th>{{li.name}}</th>
+                <th>{{li.date}}</th>
+                <th>{{li.numberOfShares}}</th>
+                <th>{{li.price}}</th>
+            </tr>
+
+        </tbody>
+
+    </table>
+</div>

@@ -17,4 +17,12 @@ export class HomeComponent implements OnInit {
     this._route.navigate(['stocks'])
   }
 
+  showNews() {
+    this._route.navigate(['stock/news']);
+  }
+
+  showIpo() {
+    this._route.navigate(['stocks/ipo']);
+  }
+
 }
