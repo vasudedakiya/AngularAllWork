@@ -3,7 +3,7 @@
 
         <thead>
             <tr>
-                <th>Symbol</th>
+                <th style="padding-left: 50px;">Symbol</th>
                 <th>Name</th>
                 <th>Currency</th>
                 <th>Figi</th>
@@ -12,33 +12,17 @@
         </thead>
 
         <tbody>
-            <tr>
-                <th scope="row">BRAXF</th>
-                <td>BRAXIA SCIENTIFIC CORP</td>
-                <td>USD</td>
-                <td>BBG00SK72178</td>
+            <tr *ngFor="let li of list">
+                <th scope="row" style="padding-left: 50px;">{{li.symbol}}</th>
+                <td>{{li.description}}</td>
+                <td>{{li.currency}}</td>
+                <td>{{li.figi}}</td>
                 <td>
-                    <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect">View</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
+                        (click)="showDetail(li.symbol )">View</button>
                 </td>
             </tr>
-            <tr>
-                <th scope="row">BRAXF</th>
-                <td>BRAXIA SCIENTIFIC CORP</td>
-                <td>USD</td>
-                <td>BBG00SK72178</td>
-                <td>
-                    <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect">View</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">BRAXF</th>
-                <td>BRAXIA SCIENTIFIC CORP</td>
-                <td>USD</td>
-                <td>BBG00SK72178</td>
-                <td>
-                    <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect">View</button>
-                </td>
-            </tr>
+
         </tbody>
 
     </table>

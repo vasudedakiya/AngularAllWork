@@ -12,6 +12,20 @@ finnhub API key : c3904paad3ido5akbae0
 
 documentations & API:- https://finnhub.io/docs/api/introduction
 
+APIS:-
+
+	https://finnhub.io/api/v1/stock/symbol?exchange=US&token=c3904paad3ido5akbae0
+
+	https://finnhub.io/api/v1/stock/profile2?symbol=IMXI&token=c3904paad3ido5akbae0
+
+	https://finnhub.io/api/v1/quote?symbol=AAPL&token=c3904paad3ido5akbae0
+
+	https://finnhub.io/api/v1/company-news?symbol=AAPL&from=2021-03-01&to=2021-03-09&token=c3904paad3ido5akbae0
+	
+	https://finnhub.io/api/v1/news?category=general&token=c3904paad3ido5akbae0
+
+	https://finnhub.io/api/v1/calendar/ipo?from=2020-01-01&to=2020-04-30&token=c3904paad3ido5akbae0
+
 ---------------------------------------------------------
 
 Google Mape API key :- AIzaSyAylSDuwiK2caXXHgUuQZs0l0DKN2Yfpsk

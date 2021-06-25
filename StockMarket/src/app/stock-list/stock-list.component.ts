@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiStockListService } from '../api-stock-list.service';
 
 @Component({
   selector: 'app-stock-list',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StockListComponent implements OnInit {
 
-  constructor() { }
+  list: any[] = [];
+
+  constructor(private _route: Router, private _apilist: ApiStockListService) { }
 
   ngOnInit(): void {
+    this._apilist.getAllStocks().subscribe((res: any) => {
+      this.list = res
+    });
+  }
+
+  showDetail(id: any) {
+    this._route.navigate(['stockdetail', id])
   }
 
 }

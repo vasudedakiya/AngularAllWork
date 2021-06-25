@@ -1,4 +1,4 @@
-<div class="h3" style="margin-left: 50px; margin-top: 7%; font-family: Bahnschrift;">
+<div class="h3" style="margin-left: 45px; margin-top: 7%; font-family: Bahnschrift;">
     <span style=" display: block; width: 7rem; height: 0.25rem; background: #0090ba; margin-bottom: 0.4375rem;">
     </span>
     Stock Detail
@@ -8,34 +8,34 @@
 
 
 
-    <div class="col-md-4 " style="font-family: Bahnschrift;">
+    <div class="col-md-5 " style="font-family: Bahnschrift;">
         <ul class=" list-group-flush">
             <li class="list-group-item"> </li>
 
 
             <li class="list-group-item"> <b>Name</b>
-                <span style="float: right; margin-right: 11%;">name</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.name}}</span>
             </li>
             <li class="list-group-item"> <b>Sector</b>
-                <span style="float: right; margin-right: 11%;">finnhubIndustry</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.finnhubIndustry}}</span>
             </li>
             <li class="list-group-item"> <b>Exchange</b>
-                <span style="float: right; margin-right: 11%;">exchange</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.exchange}}</span>
             </li>
             <li class="list-group-item"> <b>Symbol</b>
-                <span style="float: right; margin-right: 11%;">ticker</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.ticker}}</span>
             </li>
             <li class="list-group-item"> <b>Country</b>
-                <span style="float: right; margin-right: 11%;">country</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.country}}</span>
             </li>
             <li class="list-group-item"> <b>Currency</b>
-                <span style="float: right; margin-right: 11%;">currency</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.currency}}</span>
             </li>
             <li class="list-group-item"> <b>Phone</b>
-                <span style="float: right; margin-right: 11%;">phone</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.phone}}</span>
             </li>
             <li class="list-group-item"> <b>IPO</b>
-                <span style="float: right; margin-right: 11%;">ipo</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.ipo}}</span>
             </li>
 
 
@@ -43,34 +43,34 @@
             <li class="list-group-item"> </li>
         </ul>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-5">
         <ul class=" list-group-flush">
             <li class="list-group-item"> </li>
 
 
             <li class="list-group-item"> <b>Market Cap</b>
-                <span style="float: right; margin-right: 11%;">marketCapitalization</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.marketCapitalization}}</span>
             </li>
             <li class="list-group-item"> <b>Share Outstand</b>
-                <span style="float: right; margin-right: 11%;">shareOutstanding</span>
+                <span style="float: right; margin-right: 11%;">{{stockDetail.shareOutstanding}}</span>
             </li>
             <li class="list-group-item"> <b>Current Time</b>
-                <span style="float: right; margin-right: 11%;">t</span>
+                <span style="float: right; margin-right: 11%;">{{stockValue.t}}</span>
             </li>
             <li class="list-group-item"> <b>Current Price</b>
-                <span style="float: right; margin-right: 11%;">c</span>
+                <span style="float: right; margin-right: 11%;">{{stockValue.c}}</span>
             </li>
             <li class="list-group-item"> <b>Today's High</b>
-                <span style="float: right; margin-right: 11%;">h</span>
+                <span style="float: right; margin-right: 11%;">{{stockValue.h}}</span>
             </li>
             <li class="list-group-item"> <b>Today's Low</b>
-                <span style="float: right; margin-right: 11%;">l</span>
+                <span style="float: right; margin-right: 11%;">{{stockValue.l}}</span>
             </li>
             <li class="list-group-item"> <b>Opening Price</b>
-                <span style="float: right; margin-right: 11%;">o</span>
+                <span style="float: right; margin-right: 11%;">{{stockValue.o}}</span>
             </li>
             <li class="list-group-item"> <b>Previous Close</b>
-                <span style="float: right; margin-right: 11%;">pc</span>
+                <span style="float: right; margin-right: 11%;">{{stockValue.pc}}</span>
             </li>
 
 
@@ -78,5 +78,13 @@
             <li class="list-group-item"> </li>
         </ul>
     </div>
-    <div class="col-md-2"> </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-10"> </div>
+    <div class="col-md-2" style="margin-top: -2%;">
+        <button type="button" (click)="stockNews(stockDetail.ticker)"
+            class="btn btn-primary font-family: Bahnschrift;">Company Updates</button>
+    </div>
 </div>

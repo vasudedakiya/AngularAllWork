@@ -10,6 +10,9 @@ import { StockNewsComponent } from './stock-news/stock-news.component';
 import { GenralNewsComponent } from './genral-news/genral-news.component';
 import { IpoCalanderComponent } from './ipo-calander/ipo-calander.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
