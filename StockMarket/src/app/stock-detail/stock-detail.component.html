@@ -85,7 +85,7 @@
 
 </div>
 
-<div class="row">
+<div class="row" *ngIf="isDetail !==0">
     <div class="col-md-10"> </div>
     <div class="col-md-2" style="margin-top: -2%;">
         <button type="button" (click)="stockNews(stockDetail.ticker)"
