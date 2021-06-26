@@ -10,12 +10,14 @@ import { ApiStockListService } from '../api-stock-list.service';
 export class StockListComponent implements OnInit {
 
   list: any[] = [];
+  showload = true;
 
   constructor(private _route: Router, private _apilist: ApiStockListService) { }
 
   ngOnInit(): void {
     this._apilist.getAllStocks().subscribe((res: any) => {
       this.list = res
+      this.showload = false;
     });
   }
 

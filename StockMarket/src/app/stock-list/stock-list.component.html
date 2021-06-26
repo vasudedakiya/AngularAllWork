@@ -1,36 +1,39 @@
 <div style="margin-top: 5%;">
 
-    <table class="table table-striped table-responsive-md btn-table">
-
+    <table class="table table-striped table-responsive-md btn-table fixed-top" style="margin-top: 4%;">
         <thead>
-            <tr style="font-family: Bahnschrift;">
-                <th style="padding-left: 50px;">Symbol</th>
-                <th>Name</th>
-                <th>Currency</th>
-                <th>Figi</th>
-                <th>View More</th>
-            </tr>
+            <div class="row " style="font-family: Bahnschrift; background-color: lightgrey;">
+                <div class="col h5" style="padding-left: 50px;">Symbol</div>
+                <div class="col h5" style="padding-left: 40px;">Name</div>
+                <div class="col h5" style="padding-left: 400px;">Currency</div>
+                <div class="col h5" style="padding-left: 90px;"> <b>Figi</b></div>
+                <div class="col h5" style="padding-left: 30px;">View More</div>
+            </div>
+
         </thead>
+    </table>
+
+    <table class="table table-striped table-responsive-md btn-table" style="margin-top: 8%;">
 
         <tbody>
 
-            <tr *ngFor="let li of list">
-                <th scope="row" style="padding-left: 50px;">{{li.symbol}}</th>
-                <td>{{li.description}}</td>
-                <td>{{li.currency}}</td>
-                <td>{{li.figi}}</td>
-                <td>
+            <tr *ngFor="let li of list" class="row">
+                <td class="col-md-2" style="padding-left: 50px;">{{li.symbol}}</td>
+                <td class="col-md-5" style="padding-left: -500px;">{{li.description}}</td>
+                <td class="col-md-2" style="padding-left: -170px;">{{li.currency}}</td>
+                <td class="col-md-2">{{li.figi}}</td>
+                <td class="col-md-1">
                     <button type="button" class="btn btn-outline-primary btn-sm m-0 waves-effect"
                         (click)="showDetail(li.symbol )">View</button>
                 </td>
             </tr>
-            <tr class="h6">
-                <td> </td>
-                <td> </td>
-                <td>Loding data... <br> please wait... it take some time....</td>
-                <td> </td>
-                <td> </td>
-            </tr>
+
+            <div class="d-flex justify-content-center mt-5" *ngIf="showload === true">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <b> &nbsp; &nbsp; Loding data...</b>
+            </div>
 
         </tbody>
 

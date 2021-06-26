@@ -1,15 +1,21 @@
 <div style="margin-top: 5%;">
+
+    <table class="table table-striped table-responsive-md btn-table fixed-top" style="margin-top: 4%;">
+        <thead>
+            <div class="row " style="font-family: Bahnschrift; background-color: lightgrey;">
+                <div class="col h5" style="padding-left: 60px;">Symbol</div>
+                <div class="col h5" style="padding-left: 60px;">Name</div>
+                <div class="col h5" style="padding-left: 450px;">Date</div>
+                <div class="col h6" style="padding-left: 70px;"> <b>No Of Shares</b></div>
+                <div class="col h5" style="padding-left: 30px;">price</div>
+            </div>
+
+        </thead>
+    </table>
+
+
     <table class="table table-striped table-responsive-md btn-table">
 
-        <thead>
-            <tr>
-                <th style="padding-left: 50px;">Symbol</th>
-                <th>Name</th>
-                <th>Date</th>
-                <th>No Of Shares</th>
-                <th>price</th>
-            </tr>
-        </thead>
 
         <tbody>
             <tr *ngFor="let li of ipos">
