@@ -23,7 +23,7 @@ export class ApiFacultyService {
   }
 
   addFaculty(form: any) {
-    return this._http.post(this.apiUrl, form)
+    return this._http.post(this.apiUrl, this.object3)
   }
 
   update(form: any, id: number) {

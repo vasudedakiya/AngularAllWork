@@ -6,6 +6,7 @@ import { IpoCalanderComponent } from './ipo-calander/ipo-calander.component';
 import { StockDetailComponent } from './stock-detail/stock-detail.component';
 import { StockListComponent } from './stock-list/stock-list.component';
 import { StockNewsComponent } from './stock-news/stock-news.component';
+import { UsedResorceComponent } from './used-resorce/used-resorce.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: "stockdetail/:id", component: StockDetailComponent },
   { path: "stocks/ipo", component: IpoCalanderComponent },
   { path: "stock/news", component: GenralNewsComponent },
-  { path: "stock/news/:id", component: StockNewsComponent }
+  { path: "stock/news/:id", component: StockNewsComponent },
+  { path: "usedresorce", component: UsedResorceComponent }
 ];
 
 @NgModule({

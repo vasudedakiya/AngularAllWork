@@ -12,6 +12,7 @@ import { IpoCalanderComponent } from './ipo-calander/ipo-calander.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UsedResorceComponent } from './used-resorce/used-resorce.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     StockNewsComponent,
     GenralNewsComponent,
     IpoCalanderComponent,
-    HeaderComponent
+    HeaderComponent,
+    UsedResorceComponent
   ],
   imports: [
     BrowserModule,

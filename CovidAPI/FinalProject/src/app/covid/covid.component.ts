@@ -1,4 +1,4 @@
-import { ThrowStmt } from '@angular/compiler';
+
 import { Component, OnInit } from '@angular/core';
 import { ApiCovidService } from '../api-covid.service';
 import { Covid } from '../covid';
@@ -12,27 +12,27 @@ export class CovidComponent implements OnInit {
 
   constructor(private _api: ApiCovidService) { }
 
-  covid : Array<Covid> = new Array;
+  covid: Array<Covid> = new Array;
 
- 
+
   ngOnInit(): void {
     let ob = this._api.getCovid();
     ob.subscribe((res: any) => {
       let obj1: any[] = Object.values(res)
-  
+
       for (let key in obj1) {
         console.log(key);
         this.covid.push(obj1[key].All)
-        
+
       }
-      
-     
+
+
     });
   }
 
 
 
-//   ------------------------------second method-----------------------------
+  //   ------------------------------second method-----------------------------
   // covid: { country: any, confirmed: any, recovered: any, deaths: any, capital_city: any }[] = [];
   /*ngOnInit(): void {
     let ob = this._api.getCovid();
