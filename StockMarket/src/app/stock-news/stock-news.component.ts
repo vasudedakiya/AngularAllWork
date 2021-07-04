@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiStockNewsService } from '../api-stock-news.service';
 import { StockNewsClass } from '../stock-news-class';
 @Component({
@@ -13,7 +13,7 @@ export class StockNewsComponent implements OnInit {
   news: Array<StockNewsClass> = new Array;
   noNews = false;
 
-  constructor(private _apiNews: ApiStockNewsService, private _activeRoute: ActivatedRoute) { }
+  constructor(private _apiNews: ApiStockNewsService, private _activeRoute: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
     this.id = this._activeRoute.snapshot.params.id;
@@ -25,6 +25,10 @@ export class StockNewsComponent implements OnInit {
       }
 
     });
+  }
+
+  goBack() {
+    this._router.navigate(['./stockdetail', this.id])
   }
 
 

@@ -38,4 +38,9 @@ export class StockDetailComponent implements OnInit {
     this._route.navigate(['stock/news', id])
   }
 
+
+  goBack() {
+    this._route.navigate(['stocks'])
+
+  }
 }

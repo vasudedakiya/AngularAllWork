@@ -1,7 +1,14 @@
 .nav-link{
     font-weight: 500;
-    color: #414141 !important;
+    margin-right: 10px;
 }
+
+.nav-item:hover a{
+    background-color: #292b2c !important;
+    border-radius: 7px;
+    color: white;
+}
+
 .navbar-nav{
     margin-left: 10px;
 }
